@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Musculação em 90 Dias - Transforme Seu Corpo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    line-height: 1.6;
+  }
+
+  header {
+    background: #111;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  header .logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: #e63946;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+
+  nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #e63946;
+  }
+
+  .btn-primary {
+    background: #e63946;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 30px;
+  }
+
+  .btn-primary:hover {
+    background: #ab2b32;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    flex: 1 1 400px;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    color: #f1faee;
+  }
+
+  .hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #a8dadc;
+  }
+
+  .hero-text button {
+    font-size: 1.25rem;
+  }
+
+  .hero-image {
+    flex: 1 1 400px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.7);
+  }
+
+  section {
+    margin-top: 80px;
+  }
+
+  h2.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #f1faee;
+    position: relative;
+  }
+
+  h2.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e63946;
+    margin: 12px auto 0;
+    border-radius: 4px;
+  }
+
+  .about, .benefits, .what-you-get, .testimonials, .faq, .guarantee {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .about p {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    text-align: center;
+  }
+
+  /* Benefits grid */
+  .benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 30px;
+  }
+
+  .benefit-item {
+    background: #1b262c;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(230, 57, 70, 0.4);
+    transition: transform 0.3s ease;
+  }
+
+  .benefit-item:hover {
+    transform: translateY(-10px);
+  }
+
+  .benefit-icon {
+    font-size: 48px;
+    color: #e63946;
+    margin-bottom: 20px;
+  }
+
+  .benefit-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .benefit-desc {
+    font-size: 1rem;
+    color: #a8dadc;
+  }
+
+  /* What you get */
+  .what-you-get ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    color: #a8dadc;
+  }
+
+  .what-you-get li {
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+  }
+
+  .what-you-get li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #e63946;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  /* Testimonials */
+  .testimonial {
+    background: #1b262c;
+    padding: 25px 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 12px rgba(230, 57, 70, 0.3);
+  }
+
+  .testimonial p {
+    font-style: italic;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+  }
+
+  .testimonial .author {
+    font-weight: 700;
+    color: #e63946;
+    font-size: 1.1rem;
+  }
+
+  /* FAQ */
+  .faq-item {
+    margin-bottom: 20px;
+  }
+
+  .faq-question {
+    font-weight: 700;
+    color: #e63946;
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+  }
+
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: 700;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-question.active::after {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    display: none;
+    padding-left: 15px;
+    margin-top: 8px;
+    color: #a8dadc;
+  }
+
+  /* Guarantee */
+  .guarantee-text {
+    background: #1b262c;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #a8dadc;
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 80px;
+    padding: 25px 20px;
+    background: #111;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: #e63946;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+  }
+
+  footer a:hover {
+    color: #ab2b32;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-text, .hero-image {
+      flex: unset;
+      width: 100%;
+    }
+    nav {
+      display: none; /* simplificar mobile */
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">90DIASMUSCULAÇÃO</div>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#conteudo">Conteúdo</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <button class="btn-primary" onclick="scrollToSection('conteudo')">Quero Começar!</button>
+</header>
+
+<main>
+  <section class="hero container" aria-label="Seção principal do site">
+    <div class="hero-text">
+      <h1>Transforme Seu Corpo em 90 Dias<br />Com Treinos e Dietas Comprovadas</h1>
+      <p>Programa completo para queimar gordura, ganhar massa muscular e ganhar saúde — mesmo que você esteja começando do zero!</p>
+      <button class="btn-primary" onclick="scrollToSection('conteudo')">Comece Agora</button>
+    </div>
+    <div class="hero-image">
+      <img src="https://cdn-icons-png.flaticon.com/512/4076/4076549.png" alt="Ícone de musculação - homem levantando peso" loading="lazy" />
+    </div>
+  </section>
+
+  <section id="sobre" class="about container" aria-label="Sobre o programa">
+    <h2 class="section-title">Sobre o Programa</h2>
+    <p>
+      O programa <strong>Musculação em 90 Dias</strong> é um método comprovado para transformar seu corpo e sua vida. Desenvolvido por especialistas, ele combina treinos estratégicos, planos alimentares personalizados e vídeos tutoriais para que você evolua rápido e com segurança.
+      <br /><br />
+      Ideal para quem quer perder gordura, ganhar músculos e ter mais disposição sem perder tempo com métodos errados.
+    </p>
+  </section>
+
+  <section id="beneficios" class="benefits container" aria-label="Benefícios do programa">
+    <h2 class="section-title">Benefícios e Diferenciais</h2>
+    <div class="benefits-list">
+      <article class="benefit-item" tabindex="0" aria-label="Benefício: Treinos para queimar gordura">
+        <div class="benefit-icon">🔥</div>
+        <h3 class="benefit-title">Queima de Gordura Acelerada</h3>
+        <p class="benefit-desc">Treinos HIIT e circuitos que aumentam seu metabolismo e queimam gordura de forma eficiente.</p>
+      </article>
+
+      <article class="benefit-item" tabindex="0" aria-label="Benefício: Ganho de massa muscular">
+        <div class="benefit-icon">💪</div>
+        <h3 class="benefit-title">Hipertrofia Segura</h3>
+        <p class="benefit-desc">Treinos progressivos que estimulam o crescimento muscular sem risco de lesões.</p>
+      </article>
+
+      <article class="benefit-item" tabindex="0" aria-label="Benefício: Plano alimentar personalizado">
+        <div class="benefit-icon">🥗</div>
+        <h3 class="benefit-title">Dieta Personalizada</h3>
+        <p class="benefit-desc">Planos nutricionais fáceis de seguir, que complementam seus treinos para melhores resultados.</p>
+      </article>
+
+      <article class="benefit-item" tabindex="0" aria-label="Benefício: Vídeos tutoriais">
+        <div class="benefit-icon">🎥</div>
+        <h3 class="benefit-title">Vídeos Passo a Passo</h3>
+        <p class="benefit-desc">Acompanhe cada exercício com vídeos claros e explicativos para fazer tudo certo.</p>
+      </article>
+
+      <article class="benefit-item" tabindex="0" aria-label="Benefício: Acompanhamento e suporte">
+        <div class="benefit-icon">📱</div>
+        <h3 class="benefit-title">Suporte VIP</h3>
+        <p class="benefit-desc">Acesso a grupo exclusivo para tirar dúvidas e motivar seu progresso.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="conteudo" class="what-you-get container" aria-label="Conteúdo do programa">
+    <h2 class="section-title">O Que Você Vai Receber</h2>
+    <ul>
+      <li><strong>E-book Completo:</strong> com plano de treino detalhado e dicas de alimentação.</li>
+      <li><strong>Vídeos Tutoriais:</strong> explicando como executar cada exercício corretamente.</li>
+      <li><strong>Planilha Interativa:</strong> para acompanhar seu progresso semanalmente.</li>
+      <li><strong>Grupo VIP no WhatsApp:</strong> suporte e motivação diária com outros alunos.</li>
+      <li><strong>Checklist Semanal:</strong> para garantir disciplina e foco.</li>
+      <li><strong>Bônus Especial:</strong> guia prático de suplementação para acelerar resultados.</li>
+    </ul>
+  </section>
+
+  <section id="depoimentos" class="testimonials container" aria-label="Depoimentos de clientes">
+    <h2 class="section-title">Depoimentos Reais</h2>
+    <article class="testimonial" tabindex="0">
+      <p>“Nunca pensei que conseguiria transformar meu corpo em tão pouco tempo! O programa é muito fácil de seguir e os resultados são incríveis.”</p>
+      <div class="author">— João S.</div>
+    </article>
+    <article class="testimonial" tabindex="0">
+      <p>“Os vídeos me ajudaram muito a entender a execução dos exercícios. Já perdi 8kg em 2 meses e estou só começando!”</p>
+      <div class="author">— Maria F.</div>
+    </article>
+    <article class="testimonial" tabindex="0">
+      <p>“O suporte do grupo VIP fez toda a diferença para manter a motivação. Recomendo para quem quer resultados de verdade.”</p>
+      <div class="author">— Carlos M.</div>
+    </article>
+  </section>
+
+  <section id="faq" class="faq container" aria-label="Perguntas frequentes">
+    <h2 class="section-title">Perguntas Frequentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" tabindex="0">Preciso ter experiência com musculação para começar?</div>
+      <div class="faq-answer">Não, o programa é feito para todos os níveis, desde iniciantes até avançados.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" tabindex="0">Quanto tempo preciso dedicar por dia?</div>
+      <div class="faq-answer">Em média, 45 a 60 minutos diários são suficientes para seguir o programa.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" tabindex="0">Preciso comprar suplementos?</div>
+      <div class="faq-answer">Os suplementos são opcionais. O programa funciona muito bem com uma alimentação equilibrada.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" tabindex="0">E se eu não gostar ou não tiver resultado?</div>
+      <div class="faq-answer">Oferecemos garantia de satisfação de 30 dias ou seu dinheiro de volta.</div>
+    </div>
+  </section>
+
+  <section class="guarantee container" aria-label="Garantia de satisfação">
+    <div class="guarantee-text">
+      <strong>Garantia 100% Satisfação ou Seu Dinheiro de Volta!</strong><br />
+      Experimente o programa por 30 dias e, se não estiver satisfeito com os resultados, devolvemos seu investimento integralmente.
+    </div>
+  </section>
+
+  <section class="container" style="text-align:center; margin-top: 50px;">
+    <button class="btn-primary" onclick="scrollToSection('conteudo')" style="font-size:1.5rem; padding: 16px 40px;">
+      Quero Transformar Meu Corpo Agora!
+    </button>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Musculação em 90 Dias — Transforme Seu Corpo. Todos os direitos reservados.</p>
+  <p>
+    Siga-nos:
+    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a> |
+    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a> |
+    <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </p>
+</footer>
+
+<script>
+  // Função para scroll suave
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // FAQ toggle
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      q.classList.toggle('active');
+      const answer = q.nextElementSibling;
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+      } else {
+        answer.style.display = 'block';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
