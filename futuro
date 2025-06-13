@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milionário em Ação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-b from-yellow-50 to-white text-gray-800">
+    <!-- Cabeçalho -->
+    <header class="text-center py-10 bg-yellow-300 shadow-lg">
+      <h1 class="text-5xl font-extrabold text-gray-900">💸 Milionário em Ação</h1>
+      <p class="mt-2 text-2xl text-gray-700">Transforme sua mente, sua renda e sua vida!</p>
+    </header>
+
+    <!-- Seção Herói -->
+    <section class="flex flex-col items-center justify-center px-6 py-16 text-center min-h-screen">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Ícone de sucesso" class="w-32 h-32 mb-6" />
+      <h2 class="text-4xl font-bold mb-4">Descubra o passo a passo para se tornar milionário</h2>
+      <p class="max-w-2xl text-lg text-gray-600 mb-6">Você está a um clique de mudar sua realidade financeira. Conheça os hábitos, estratégias e métodos usados pelos milionários de verdade.</p>
+      <a href="https://SEULINKKIWIFY.com" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition duration-300">Quero Ficar Milionário 💰</a>
+    </section>
+
+    <!-- Seção Imagens de Carros e Dinheiro -->
+    <section class="bg-yellow-100 py-24 px-6 min-h-screen">
+      <h3 class="text-3xl font-bold text-center mb-10">O que te espera no caminho da riqueza</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Carro de luxo" class="w-full h-56 object-contain" />
+        <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Dinheiro" class="w-full h-56 object-contain" />
+        <img src="https://cdn-icons-png.flaticon.com/512/2933/2933887.png" alt="Casa dos sonhos" class="w-full h-56 object-contain" />
+      </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="bg-white py-24 px-6 min-h-screen">
+      <h3 class="text-3xl font-bold text-center mb-12">Você vai aprender:</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+        <div class="bg-yellow-50 p-6 rounded-xl shadow-md text-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/2904/2904659.png" class="w-16 h-16 mx-auto mb-4" />
+          <h4 class="font-bold text-xl">Mentalidade de Riqueza</h4>
+          <p class="text-gray-700 mt-2">Mude seus hábitos e elimine crenças limitantes que te afastam do sucesso financeiro.</p>
+        </div>
+        <div class="bg-yellow-50 p-6 rounded-xl shadow-md text-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" class="w-16 h-16 mx-auto mb-4" />
+          <h4 class="font-bold text-xl">Fontes de Renda</h4>
+          <p class="text-gray-700 mt-2">Descubra formas comprovadas de ganhar dinheiro e multiplicar seu capital.</p>
+        </div>
+        <div class="bg-yellow-50 p-6 rounded-xl shadow-md text-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/1570/1570990.png" class="w-16 h-16 mx-auto mb-4" />
+          <h4 class="font-bold text-xl">Plano de 90 Dias</h4>
+          <p class="text-gray-700 mt-2">Siga um plano passo a passo para acelerar sua jornada rumo ao primeiro milhão.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-24 bg-yellow-50 px-6 min-h-screen">
+      <h3 class="text-3xl font-bold text-center mb-10">Depoimentos de quem já conquistou</h3>
+      <div class="max-w-4xl mx-auto space-y-10">
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <p class="italic text-lg">"Comprei o curso sem expectativas... hoje já abri minha primeira venda e estou faturando bem. Obrigado!"</p>
+          <p class="mt-2 font-bold">— Rafael M., São Paulo</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <p class="italic text-lg">"Aplicando só 30% do conteúdo, minha renda subiu bastante em 2 meses. É surreal."</p>
+          <p class="mt-2 font-bold">— Juliana C., Rio de Janeiro</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada final -->
+    <section class="text-center py-24 bg-yellow-200 min-h-screen">
+      <h2 class="text-4xl font-bold mb-4">Pronto para mudar sua vida?</h2>
+      <p class="text-xl mb-6">Comece agora sua jornada rumo à liberdade financeira.</p>
+      <a href="https://SEULINKKIWIFY.com" target="_blank" class="bg-black text-yellow-300 font-bold py-4 px-8 rounded-full shadow-lg hover:scale-105 transition-transform">Quero Começar Agora 🚀</a>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-center text-sm text-gray-500 py-8 bg-white">
+      © 2025 Milionário em Ação. Todos os direitos reservados.
+    </footer>
+  </body>
+</html>
